@@ -1,25 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Mata Mosquito</title>
 		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" >
 
 		<link rel="stylesheet" href="css/style.css" />
-
-		<script>
-			function iniciarJogo() {
-				var nivel = document.getElementById('nivel').value
-
-				if(nivel === '') {
-					alert('Selecione um nível para iniciar o jogo')
-					return false
-				}
-
-				window.location.href = "app.html?" + nivel
-
-			}
-		</script>
 	</head>
 	<body>
 
@@ -51,11 +37,13 @@
 			<div class="row">
 				<div class="col">
 					<div class="d-flex justify-content-center">
-						<button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()" >Iniciar Jogo</button>
+						<button type="button" class="btn btn-danger btn-lg" id="btn-iniciar-jogo">Iniciar Jogo</button>
 					</div>
 				</div>
 			</div>
 		</div>
-
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="./js/resize.js"></script>
+		<script src="./js/main.js"></script>
 	</body>
 </html>
